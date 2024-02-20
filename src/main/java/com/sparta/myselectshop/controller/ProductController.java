@@ -40,7 +40,7 @@ public class ProductController {
         return productService.getProducts(userDetails.getUser(),page-1, size, sortBy, isAsc);
     }
 
-    @PostMapping
+    @PostMapping("products/{productid}/folder")
     public void addFolder(
             @PathVariable Long productId,
             @RequestParam Long folderId,
